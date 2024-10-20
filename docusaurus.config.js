@@ -4,7 +4,7 @@ import { themes as prismThemes } from "prism-react-renderer";
 const config = {
   title: "Prisma",
   tagline: "Dinosaurs are cool",
-  favicon: "img/logo.svg",
+  favicon: "img/dark-logo.svg",
   url: "https://github.com",
   baseUrl: "/prisma/",
   organizationName: "nmc-docs",
@@ -42,6 +42,7 @@ const config = {
         logo: {
           alt: "My Site Logo",
           src: "img/logo.svg",
+          srcDark: "img/dark-logo.svg",
         },
         items: [
           {
@@ -55,6 +56,7 @@ const config = {
       prism: {
         theme: prismThemes.github,
         darkTheme: prismThemes.dracula,
+        additionalLanguages: ["powershell", "bash", "json", "yaml", "docker"],
       },
     }),
 };

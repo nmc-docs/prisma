@@ -1,6 +1,6 @@
 {
-  "label": "Nested Menu",
-  "position": 2,
+  "label": "Relations",
+  "position": 3,
   "link": {
     "type": "generated-index"
   }
