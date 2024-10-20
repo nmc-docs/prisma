@@ -21,7 +21,7 @@ Prisma không chỉ hỗ trợ tốt cho các ứng dụng web mà còn giúp đ
 
 ### Cài đặt Prisma và Prisma Client
 
-```ba
+```bash
 npm i -D prisma && npm i @prisma/client
 ```
 
