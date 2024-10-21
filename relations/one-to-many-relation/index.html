@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="generator" content="Docusaurus v3.5.2">
 <title data-rh="true">Quan hệ 1 - n | Prisma</title><meta data-rh="true" name="viewport" content="width=device-width,initial-scale=1"><meta data-rh="true" name="twitter:card" content="summary_large_image"><meta data-rh="true" property="og:url" content="https://github.com/prisma/relations/one-to-many-relation"><meta data-rh="true" property="og:locale" content="en"><meta data-rh="true" name="docusaurus_locale" content="en"><meta data-rh="true" name="docsearch:language" content="en"><meta data-rh="true" name="docusaurus_version" content="current"><meta data-rh="true" name="docusaurus_tag" content="docs-default-current"><meta data-rh="true" name="docsearch:version" content="current"><meta data-rh="true" name="docsearch:docusaurus_tag" content="docs-default-current"><meta data-rh="true" property="og:title" content="Quan hệ 1 - n | Prisma"><meta data-rh="true" name="description" content="1 - n relation"><meta data-rh="true" property="og:description" content="1 - n relation"><link data-rh="true" rel="icon" href="/prisma/img/dark-logo.svg"><link data-rh="true" rel="canonical" href="https://github.com/prisma/relations/one-to-many-relation"><link data-rh="true" rel="alternate" href="https://github.com/prisma/relations/one-to-many-relation" hreflang="en"><link data-rh="true" rel="alternate" href="https://github.com/prisma/relations/one-to-many-relation" hreflang="x-default"><link rel="stylesheet" href="/prisma/assets/css/styles.310e4b26.css">
-<script src="/prisma/assets/js/runtime~main.aa4376c0.js" defer="defer"></script>
+<script src="/prisma/assets/js/runtime~main.21c2baac.js" defer="defer"></script>
 <script src="/prisma/assets/js/main.8d1e5563.js" defer="defer"></script>
 </head>
 <body class="navigation-with-keyboard">
@@ -25,7 +25,7 @@
 </ul>
 <p><img decoding="async" loading="lazy" alt="1729490932098" src="/prisma/assets/images/1729490932098-462e8c71619961cae9ab9acb3b0ac5be.png" width="1648" height="732" class="img_ev3q"></p>
 <div class="theme-admonition theme-admonition-caution admonition_xJq3 alert alert--warning"><div class="admonitionHeading_Gvgb"><span class="admonitionIcon_Rf37"><svg viewBox="0 0 16 16"><path fill-rule="evenodd" d="M8.893 1.5c-.183-.31-.52-.5-.887-.5s-.703.19-.886.5L.138 13.499a.98.98 0 0 0 0 1.001c.193.31.53.501.886.501h13.964c.367 0 .704-.19.877-.5a1.03 1.03 0 0 0 .01-1.002L8.893 1.5zm.133 11.497H6.987v-2.003h2.039v2.003zm0-3.004H6.987V5.987h2.039v4.006z"></path></svg></span>caution</div><div class="admonitionContent_BuS1"><ul>
-<li>Lưu ý rằng trong model được tham chiếu đến, thuộc tính nào làm khóa ngoại thì bắt buộc phải có attribute <code>@unique</code></li>
+<li>Lưu ý rằng trong model được tham chiếu đến, thuộc tính nào mà khóa ngoại liên kết đến thì bắt buộc phải có attribute <code>@unique</code> (như ở ví dụ trên là trường <code>email</code>)</li>
 </ul></div></div>
 <ul>
 <li>Dưới đây là ví dụ trong MongoDB:</li>
