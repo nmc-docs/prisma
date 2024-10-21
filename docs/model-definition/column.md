@@ -12,15 +12,7 @@ sidebar_position: 2
   - **attribute_function**: Thường nằm trong attribute để tự động tạo ra giá trị.
 - Ví dụ:
 
-```plaintext
-model User {
-  id        Int      @id @default(autoincrement())
-  email     String   @unique
-  name      String?
-  createdAt DateTime @default(now())
-  updatedAt DateTime @updatedAt
-}
-```
+![1729521048333](image/column/1729521048333.png)
 
 - Trong ví dụ trên:
   - **field_name**: `id`, `email`, `name`,...
@@ -79,37 +71,15 @@ model ModelName {
 
 - Ví dụ, trong MySQL, ta có thể sử dụng native types như `VARCHAR`, `TEXT`, `DECIMAL`, v.v.
 
-```prisma
-model User {
-  id    Int    @id @default(autoincrement()) // Integer với auto-increment
-  name  String @db.VarChar(255)              // String ánh xạ sang kiểu VARCHAR(255)
-  bio   String @db.Text                      // String ánh xạ sang kiểu TEXT
-  age   Int    @db.Int                       // Int ánh xạ sang kiểu INT
-}
-```
+![1729520532610](image/column/1729520532610.png)
 
 - PostgreSQL Native Type Mapping. PostgreSQL hỗ trợ các kiểu dữ liệu như `UUID`, `TEXT`, `BIGINT`, `TIMESTAMPTZ`, v.v.
 
-```prisma
-model Post {
-  id        Int      @id @default(autoincrement())
-  uuid      String   @db.Uuid                     // String ánh xạ sang kiểu UUID
-  content   String   @db.Text                     // String ánh xạ sang kiểu TEXT
-  views     BigInt   @db.BigInt                   // BigInt ánh xạ sang kiểu BIGINT
-  createdAt DateTime @db.Timestamptz(6)           // DateTime ánh xạ sang TIMESTAMPTZ với độ chính xác 6 chữ số
-}
-```
+![1729520593317](image/column/1729520593317.png)
 
 - SQL Server Native Type Mapping. SQL Server có các kiểu như `NVARCHAR`, `DATETIME2`, `BIT`, v.v.
 
-```prisma
-model Product {
-  id          Int      @id @default(autoincrement())
-  description String   @db.NVarChar(1000)         // String ánh xạ sang NVARCHAR(1000)
-  price       Float    @db.Decimal(10, 2)         // Float ánh xạ sang DECIMAL(10,2)
-  available   Boolean  @db.Bit                    // Boolean ánh xạ sang BIT
-}
-```
+![1729520617884](image/column/1729520617884.png)
 
 - Lợi ích của Native Type Mapping:
 
@@ -130,21 +100,11 @@ model Product {
 
 - Ví dụ về `[]` modifier:
 
-```plaintext
-model User {
-  id             Int      @id @default(autoincrement())
-  favoriteColors String[] @default(["red", "blue", "green"])
-}
-```
+![1729521124898](image/column/1729521124898.png)
 
 - Ví dụ về `?` modifier:
 
-```plaintext
-model User {
-  id   Int     @id @default(autoincrement())
-  name String?
-}
-```
+![1729521141969](image/column/1729521141969.png)
 
 ## Attributes
 
@@ -157,14 +117,7 @@ model User {
 - **Field-level attributes** được gán cho các trường (fields) trong một mô hình. Chúng xác định các ràng buộc, hành vi hoặc các tính năng đặc biệt cho trường đó. **Field-level attributes** thường được định nghĩa ngay sau loại trường (field type).
 - Ví dụ:
 
-```prisma
-model User {
-  id        Int      @id @default(autoincrement())   // Khóa chính với tự động tăng giá trị
-  email     String   @unique                        // Trường email phải là duy nhất
-  createdAt DateTime @default(now())                // Thời gian tạo với giá trị mặc định là thời gian hiện tại
-  updatedAt DateTime @updatedAt                     // Tự động cập nhật thời gian mỗi khi bản ghi thay đổi
-}
-```
+![1729521158832](image/column/1729521158832.png)
 
 - Các **field-level attributes** phổ biến:
 
@@ -182,17 +135,7 @@ model User {
 - Model-level attributes được áp dụng cho toàn bộ mô hình và có thể tác động đến nhiều trường hoặc đến cách dữ liệu của mô hình đó được quản lý. Chúng thường được đặt dưới cùng của mô hình với cú pháp bắt đầu bằng `@@`.
 - Ví dụ:
 
-```prisma
-model Post {
-  id        Int      @id @default(autoincrement())
-  title     String
-  content   String?
-  authorId  Int
-  @@index([title])                             // Tạo index cho trường title
-  @@unique([authorId, title])                  // Ràng buộc duy nhất cho sự kết hợp giữa authorId và title
-  @@map("posts_table")                         // Đổi tên bảng trong cơ sở dữ liệu thành "posts_table"
-}
-```
+![1729521177590](image/column/1729521177590.png)
 
 - Các **model-level attributes** phổ biến:
 
@@ -205,17 +148,7 @@ model Post {
 
 Ví dụ tổng hợp cả hai loại attributes:
 
-```prisma
-model Product {
-  id        Int      @id @default(autoincrement())   // Khóa chính tự động tăng
-  name      String   @unique                        // Tên sản phẩm phải là duy nhất
-  price     Float    @default(0.0)                  // Giá mặc định là 0.0
-  createdAt DateTime @default(now())                // Thời gian tạo
-  updatedAt DateTime @updatedAt                     // Tự động cập nhật thời gian
-  @@index([name])                                   // Tạo index cho tên sản phẩm
-  @@map("products_table")                           // Đặt tên bảng là "products_table"
-}
-```
+![1729521205227](image/column/1729521205227.png)
 
 ## Attribute function
 
@@ -232,45 +165,8 @@ model Product {
 
 - Ví dụ về `auto()`:
 
-```plaintext
-model User {
-  id   String  @id @default(auto()) @map("_id") @db.ObjectId
-  name String?
-}
-```
+![1729521303387](image/column/1729521303387.png)
 
-- Ví dụ về `autoincrement()`:
+- Ví dụ về `uuid()`, `now()`:
 
-```plaintext
-model User {
-  id   Int    @id @default(autoincrement())
-  name String
-}
-```
-
-- Ví dụ về `cuid()`:
-
-```plaintext
-model User {
-  id   String @id @default(cuid())
-  name String
-}
-```
-
-- Ví dụ về `uuid()`:
-
-```plaintext
-model User {
-  id   String @id @default(uuid())
-  name String
-}
-```
-
-- Ví dụ về `now()`:
-
-```plaintext
-model User {
-  id        String   @id
-  createdAt DateTime @default(now())
-}
-```
+![1729521280336](image/column/1729521280336.png)

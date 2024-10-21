@@ -19,35 +19,11 @@ sidebar_position: 3
 
 - Ví dụ trong relation databse:
 
-```plaintext
-model User {
-  id    Int     @id @default(autoincrement())
-  email String  @unique
-  name  String?
-  role  Role    @default(USER)
-}
-
-enum Role {
-  USER
-  ADMIN
-}
-```
+![1729521352549](image/enum-type/1729521352549.png)
 
 - Ví dụ về MongoDB:
 
-```plaintext
-model User {
-  id    String  @id @default(auto()) @map("_id") @db.ObjectId
-  email String  @unique
-  name  String?
-  role  Role    @default(USER)
-}
-
-enum Role {
-  USER
-  ADMIN
-}
-```
+![1729521367789](image/enum-type/1729521367789.png)
 
 ## type
 
@@ -64,16 +40,4 @@ enum Role {
 
 - Ví dụ:
 
-```plaintext
-model Product {
-  id     String  @id @default(auto()) @map("_id") @db.ObjectId
-  name   String
-  photos Photo[]
-}
-
-type Photo {
-  height Int
-  width  Int
-  url    String
-}
-```
+![1729521384636](image/enum-type/1729521384636.png)

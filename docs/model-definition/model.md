@@ -19,6 +19,6 @@ model User {
 
 :::note
 
-- Ta có thể sử dụng @@map() để thay đổi lại tên entity trong cơ sở dữ liệu.
+- Ta có thể sử dụng `@@map()` để thay đổi lại tên entity trong cơ sở dữ liệu.
 
 :::

@@ -1,7 +1,6 @@
 ---
 sidebar_position: 1
 ---
-
 # Quan hệ 1 - 1
 
 ## 1-1 relation
@@ -9,7 +8,7 @@ sidebar_position: 1
 - Trong Prisma, quan hệ one-to-one (một-một) được sử dụng khi một bản ghi trong một bảng chỉ có thể liên kết với một bản ghi duy nhất trong bảng khác. Ví dụ, một `User` có thể có một `Profile`, và mỗi `Profile` chỉ thuộc về một `User`.
 - Dưới đây là một ví dụ về quan hệ one-to-one giữa hai bảng `User` và `Profile` với CSDL quan hệ trong Prisma:
 
-![1729490205722](image/one-to-one-relation/1729490205722.png)
+![1729521821500](image/one-to-one-relation/1729521821500.png)
 
 :::info
 
@@ -23,7 +22,7 @@ sidebar_position: 1
 
 - Ví dụ bên trên lấy `id` của user làm khóa ngoại, ví dụ sau đây sẽ lấy `email` làm khóa ngoại:
 
-![1729490301219](image/one-to-one-relation/1729490301219.png)
+![1729521934028](image/one-to-one-relation/1729521934028.png)
 
 :::caution
 
@@ -33,12 +32,12 @@ sidebar_position: 1
 
 - Dưới đây là ví dụ trong MongoDB:
 
-![1729490322153](image/one-to-one-relation/1729490322153.png)
+![1729522282396](image/one-to-one-relation/1729522282396.png)
 
-![1729490345439](image/one-to-one-relation/1729490345439.png)
+![1729522035562](image/one-to-one-relation/1729522035562.png)
 
 ## Optional 1-1 relation
 
 - Trong ví dụ trên, khi tạo **Profile** thì ta bắt buộc phải liên kết với 1 **User** cụ thể, để không phải làm vậy, ta đánh dấu chỗ `userId` với `user` trong model **Profile** là optional:
 
-![1729490554132](image/one-to-one-relation/1729490554132.png)
+![1729522367945](image/one-to-one-relation/1729522367945.png)

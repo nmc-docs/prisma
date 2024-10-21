@@ -18,7 +18,7 @@ sidebar_position: 4
 
 * Ví dụ:
 
-![1729495442541](image/@relation/1729495442541.png)
+![1729523362286](image/@relation/1729523362286.png)
 
 - Ở đây, `userId` trong mô hình `Post` là trường khóa ngoại, được chỉ định trong `fields`.
 
@@ -34,7 +34,7 @@ sidebar_position: 4
 - Nếu không chỉ định, Prisma sẽ tự động tạo tên dựa trên các tên mô hình.
 - Ví dụ:
 
-![1729495624839](image/@relation/1729495624839.png)
+![1729523555590](image/@relation/1729523555590.png)
 
 ## onDelete / onUpdate
 
@@ -46,10 +46,9 @@ sidebar_position: 4
   - `NoAction`: Không thực hiện hành động gì.
 - Ví dụ:
 
-![1729495821947](image/@relation/1729495821947.png)
+![1729523610367](image/@relation/1729523610367.png)
 
 ➡️ Trong ví dụ trên:
 
-    - Khi một`User` bị xóa, tất cả các `Post` liên quan cũng sẽ tự động bị xóa.
-
-    - Khi`User` cập nhật `id`, tất cả các `Post` liên quan sẽ tự động cập nhật theo `userId` mới.
+- Khi một `User` bị xóa, tất cả các `Post` liên quan cũng sẽ tự động bị xóa.
+- Khi `User` cập nhật `id`, tất cả các `Post` liên quan sẽ tự động cập nhật theo `userId` mới.
