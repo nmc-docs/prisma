@@ -1,6 +1,7 @@
 ---
 sidebar_position: 2
 ---
+
 # Quan hệ 1 - n
 
 ## 1 - n relation
@@ -26,7 +27,7 @@ Với thiết lập này, một `User` có thể có nhiều bài viết (`Post`
 
 :::caution
 
-- Lưu ý rằng trong model được tham chiếu đến, thuộc tính nào làm khóa ngoại thì bắt buộc phải có attribute `@unique`
+- Lưu ý rằng trong model được tham chiếu đến, thuộc tính nào mà khóa ngoại liên kết đến thì bắt buộc phải có attribute `@unique` (như ở ví dụ trên là trường `email`)
 
 :::
 
@@ -62,6 +63,7 @@ Với thiết lập này, một `User` có thể có nhiều bài viết (`Post`
 
   - Khi có nhiều hơn một quan hệ giữa hai bảng giống nhau.
   - Khi ta muốn quản lý các mối quan hệ khác nhau một cách tường minh để tránh nhầm lẫn trong các truy vấn.
+
 - Disambiguating relations giúp làm rõ các mối quan hệ, đảm bảo chúng được truy vấn và quản lý một cách chính xác.
 
 :::

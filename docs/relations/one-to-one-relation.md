@@ -27,7 +27,7 @@ sidebar_position: 1
 
 :::caution
 
-- Lưu ý rằng trong cả 2 model, thuộc tính nào làm khóa ngoại thì bắt buộc phải có attribute `@unique`
+- Lưu ý rằng trong cả 2 model, thuộc tính làm khóa ngoại và thuộc tính được khóa ngoại liên kết đến thì bắt buộc phải có attribute `@unique` (như ở ví dụ trên là `email` và `userEmail`)
 
 :::
 
